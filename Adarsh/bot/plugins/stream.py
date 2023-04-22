@@ -108,9 +108,9 @@ async def private_receive_handler(c: Client, m: Message):
 
         log_msg = await m.forward(chat_id=Var.BIN_CHANNEL)
         stream_link = f"{Var.URL}watch/{str(log_msg.message_id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
-        stream_linkk = f"https://linksearn.site/st?api={Var.API}&url={stream_link}"
+        stream_linkk = f"https://tglink.in/st?api={Var.API}&url={stream_link}"
         
-        online_link = f"https://linksearn.site/st?api={Var.API}&url={Var.URL}{str(log_msg.message_id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+        online_link = f"https://tglink.in/st?api={Var.API}&url={Var.URL}{str(log_msg.message_id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
         online_linkkk = get_shortlink(online_link)
 
 #short link support added ✅
