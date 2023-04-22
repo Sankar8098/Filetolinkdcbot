@@ -24,7 +24,7 @@ pass_db = Database(Var.DATABASE_URL, "ag_passwords")
 def get_shortlink(url):
    shortlink = False 
    try:
-      shortlink = Shortener().dagd.short(url)
+      shortlink = Shortener().tglink.in.short(url)
    except Exception as err:
        print(err)
        pass
