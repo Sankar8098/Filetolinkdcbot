@@ -24,7 +24,7 @@ pass_db = Database(Var.DATABASE_URL, "ag_passwords")
 def get_shortlink(url):
    shortlink = False 
    try:
-      shortlink = Shortener().tglink.short(url)
+      shortlink = Shortener().tg.link.short(url)
    except Exception as err:
        print(err)
        pass
@@ -44,13 +44,13 @@ async def login_handler(c: Client, m: Message):
             else:
                 return
         except TimeoutError:
-            await ag.edit("I can't wait more for password, try again, request it from @DcStreambot")
+            await ag.edit("I can't wait more for password, try again, request it from @SK_MoviesOffl")
             return
         if textp == MY_PASS:
             await pass_db.add_user_pass(m.chat.id, textp)
             ag_text = "yeah! you entered the password correctly. Enjoy Your Life 😜"
         else:
-            ag_text = "Wrong password, try again, request it from @DcStreambot"
+            ag_text = "Wrong password, try again, request it from @SK_MoviesOffl"
         await ag.edit(ag_text)
     except Exception as e:
         print(e)
